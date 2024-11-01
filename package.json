@@ -1,0 +1,62 @@
+{
+  "name": "tiampersian",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "node --max_old_space_size=8048 ./node_modules/@angular/cli/bin/ng serve",
+    "start2": "node --max_old_space_size=8048 ./node_modules/@angular/cli/bin/ng serve --port 4202",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "add:capture": "npm install capture-website --save-dev",
+    "setversion": "node update-version.js",
+    "build:ci": "ng build @tiampersian/material-jalali-datepicker",
+    "test:ci": "ng test tiampersian --browsers=ChromeHeadless --watch=false",
+    "build:app:ci": "ng build",
+    "start:state": "webpack-bundle-analyzer dist/material-jalali-datepicker/stats.json",
+    "publish": "npm publish dist/tiampersian/material-jalali-datepicker  --access public"
+  },
+  "private": false,
+  "dependencies": {
+    "@angular/animations": "16.2.2",
+    "@angular/common": "16.2.2",
+    "@angular/compiler": "16.2.2",
+    "@angular/core": "16.2.2",
+    "@angular/forms": "16.2.2",
+    "@angular/localize": "16.2.2",
+    "@angular/platform-browser": "16.2.2",
+    "@angular/platform-browser-dynamic": "16.2.2",
+    "@angular/router": "16.2.2",
+    "@angular/material": "^16.0.3",
+    "dayjs": "1.11.10",
+    "jalaliday": "2.3.0",
+    "@types/lodash-es": "^4.17.7",
+    "lodash-es": "^4.17.21",
+    "rxjs": "7.8.1",
+    "tslib": "2.6.0",
+    "zone.js": "0.13.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "16.2.0",
+    "@angular/cli": "16.2.0",
+    "@angular/compiler-cli": "16.2.2",
+    "@types/jasmine": "4.3.5",
+    "@types/node": "18.15.3",
+    "codelyzer": "6.0.2",
+    "jasmine-core": "5.0.1",
+    "jasmine-spec-reporter": "7.0.0",
+    "karma": "6.4.2",
+    "karma-chrome-launcher": "3.2.0",
+    "karma-coverage": "2.2.1",
+    "karma-jasmine": "5.1.0",
+    "karma-jasmine-html-reporter": "2.1.0",
+    "ng-packagr": "16.2.1",
+    "protractor": "7.0.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.1.6"
+  },
+  "optionalDependencies": {
+    "puppeteer": "14.3.0"
+  }
+}

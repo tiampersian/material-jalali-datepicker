@@ -1,0 +1,23 @@
+<div class="timepicker">
+  <mat-form-field class="example-full-width">
+    <mat-label i18n="@@hour">Hour</mat-label>
+    <mat-select [value]="hour"
+                i18n-label="@@hour"
+                label="Hour"
+                (valueChange)="onChangeHour($event)">
+      <mat-option *ngFor="let item of hourData"
+                  [value]="item.value">{{item.title}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  :
+  <mat-form-field class="example-full-width">
+    <mat-label i18n="@@minute">Minute</mat-label>
+    <mat-select [value]="minute"
+                (valueChange)="onChangeMinute($event)"
+                i18n-label="@@minute"
+                label="Minute">
+      <mat-option *ngFor="let item of minuteData"
+                  [value]="item.value">{{item.title}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

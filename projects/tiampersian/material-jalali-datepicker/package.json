@@ -1,0 +1,59 @@
+{
+  "name": "@tiampersian/material-jalali-datepicker",
+  "version": "0.1.334",
+  "license": "MIT",
+  "description": "angular jalali ( persian ) date time picker base on kendo-angular-dateinputs ",
+  "homepage": "https://github.com/tiampersian/material-jalali-datepicker",
+  "bugs": "https://github.com/tiampersian/material-jalali-datepicker/issues",
+  "peerDependencies": {
+    "@progress/kendo-licensing": "*",
+    "@angular/common": "8 - 16",
+    "@angular/localize": "8 - 16",
+    "@angular/core": "8 - 16"
+  },
+  "authors": [
+    "Abbas Mirzaei <tiampersian@gmail.com>"
+  ],
+  "keywords": [
+    "angular",
+    "jalali",
+    "shamsi",
+    "date time",
+    "date picker",
+    "date picker",
+    "calendare",
+    "date input",
+    "dateInput",
+    "jalali date input",
+    "jalali date picker",
+    "jalali calendar",
+    "jalali date time",
+    "kendo jalali date input",
+    "kendo jalali date picker",
+    "kendo jalali calendar",
+    "kendo jalali date time",
+    "angular jalali date input",
+    "angular jalali date picker",
+    "angular jalali calendar",
+    "angular jalali date time",
+    "angular calendar",
+    "jalali angular date picker"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiampersian/material-jalali-datepicker"
+  },
+  "dependencies": {
+    "@progress/kendo-angular-common": "13.3.0",
+    "@progress/kendo-angular-dateinputs": "13.3.0",
+    "@progress/kendo-angular-intl": "13.3.0",
+    "@progress/kendo-angular-l10n": "13.3.0",
+    "@progress/kendo-angular-popup": "13.3.0",
+    "dayjs": "1.11.10",
+    "jalaliday": "2.3.0",
+    "tslib": "^2.4.0"
+  },
+  "scripts": {
+    "setversion": "npm version"
+  }
+}

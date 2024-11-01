@@ -1,0 +1,39 @@
+::ng-deep {
+    uf-date-range-picker {
+        width: 100%;
+
+        kendo-dateinput+button+uf-popup {
+            position: fixed !important;
+        }
+    }
+
+    .k-daterangepicker {
+        flex: 3;
+    }
+
+    .k-timepicker {
+        flex: 2;
+    }
+
+    .rtl, [dir=rtl] {
+        kendo-calendar-navigation.k-calendar-navigation kendo-virtualization {
+            margin-left: -110px !important;
+        }
+
+        kendo-calendar-viewlist kendo-virtualization {
+            margin-right: -110px !important;
+        }
+
+        kendo-dateinput.k-input.k-dateinput input {
+            unicode-bidi: plaintext!important;
+            // unicode-bidi: embed!important;
+            // unicode-bidi: isolate-override!important;
+            // unicode-bidi: bidi-override!important;
+            // direction: rtl!important;
+        }
+
+        .k-time-container {
+            margin-left: -150px;
+        }
+    }
+}

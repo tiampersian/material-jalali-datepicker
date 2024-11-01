@@ -1,0 +1,55 @@
+<div (click)="onInputClick($event)"
+     style="display: flex;"
+     [ngClass]="{'has-timepicker':!hideTimepicker}">
+    <input style="opacity: 0;width: 0;position: absolute;"
+           (dateChange)="changeInputValue($event.value?.toDate())"
+           class="ignore-me"
+           (input)="changeInputValue(null)"
+           [matDatepicker]="picker" />
+    <input matInput
+           #inputEl
+           type="text"
+           class="mat-mdc-form-field-input-control mdc-text-field__input"
+           style="unicode-bidi:bidi-override"
+           [value]="outputValue"
+           (focus)="picker.open()"
+           (dragstart)="stopEvents($event)"
+           (drop)="stopEvents($event)"
+           (paste)="stopEvents($event)"
+           (focusout)="onInputBlur($event)"
+           (keydown)="onKeyDown($event)">
+
+    <mat-datepicker #picker>
+        <mat-datepicker-actions *ngIf="!hideTimepicker">
+            <div style="display:flex;flex-direction:column; width:100%;">
+                <tp-timepicker [(value)]="timeValue"
+                               style="width: 100%;" />
+
+                <div style="display:flex;justify-content:between">
+                    <div>
+                        <button mat-button
+                                (click)="goToNow()">
+                            <span i18n="@@now">Now</span>
+                        </button>
+                        <button mat-button
+                                class="px-0 mx-0"
+                                (click)="toggleCalendarType()">
+                            <i class="fa fa-sort"></i>
+                            <small>{{calendarTypes[dateAdaptor.calendarType]}}</small>
+                        </button>
+                    </div>
+                    <div>
+
+                        <button mat-button
+                                i18n="@@cancel"
+                                matDatepickerCancel>Cancel</button>
+                        <button mat-raised-button
+                                color="primary"
+                                i18n="@@apply"
+                                matDatepickerApply>Apply</button>
+                    </div>
+                </div>
+            </div>
+        </mat-datepicker-actions>
+    </mat-datepicker>
+</div>
